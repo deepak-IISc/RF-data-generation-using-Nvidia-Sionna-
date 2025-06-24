@@ -79,11 +79,12 @@ Make sure your NVIDIA driver is compatible with CUDA 12.8.
 TensorFlow 2.15.1 will automatically use GPU if the CUDA runtime and cuDNN are properly installed.  
 When using GPU make sure your TensorFlow installation matches your CUDA and cuDNN setup.  
   
-3. Prepare scene files:  
+3. Prepare scene files:
+Download and unzip the folder named xml_scene.zip
 Ensure your XML scene files are stored under: /home/xml_scene/scene{i}/scene{i}.xml  
 Set the correct save path inside the Python script  
   
-4. Running the Simulation  
+5. Running the Simulation  
 Simply execute:  
 python generate_rf_tracks.py  
 The script will process all available scenes and save the results to the specified HDF5 files.  

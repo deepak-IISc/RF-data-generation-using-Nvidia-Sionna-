@@ -2,16 +2,16 @@
 This repository simulates RF signal tracks with Doppler effect using the NVIDIA Sionna ray tracing library. The generated data includes CSI matrices, receiver tracks, and transmitter orientations for multiple scene configurations.
 project/
 │
-├── generate_rf_tracks.py      # Main simulation script
-├── /home/xml_scene/           # Folder containing XML files for scenes
-│   ├── scene1/
-│   │    └── scene1.xml
-│   ├── scene2/
-│   │    └── scene2.xml
-│   └── ...
-├── /home/sionna_csi_dataset/  # Folder where generated HDF5 datasets will be saved
-│
-└── README.md                  # This file
+├── generate_rf_tracks.py      # Main simulation script  
+├── /home/xml_scene/           # Folder containing XML files for scenes  
+│   ├── scene1/  
+│   │    └── scene1.xml  
+│   ├── scene2/   
+│   │    └── scene2.xml  
+│   └── ...  
+├── /home/sionna_csi_dataset/  # Folder where generated HDF5 datasets will be saved  
+│  
+└── README.md                  # This file  
 
 This simulation:
 1. Loads predefined scenes from XML files.

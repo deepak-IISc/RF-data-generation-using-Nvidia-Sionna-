@@ -87,7 +87,28 @@ Set the correct save path inside the Python script
 5. Running the Simulation  
 Simply execute:  
 python generate_rf_tracks.py  
-The script will process all available scenes and save the results to the specified HDF5 files.  
+The script will process all available scenes and save the results to the specified HDF5 files.
+  
+  
+We have also developed a baseline application using this dataset for user localization via a machine learning model. In this setup, we achieved a mean Euclidean distance error of approximately 0.2949 meters on the test dataset.    
+To run and trained the model rn the script localization_model/model.py  
+Please make sure to:  
+✅ Adjust all folder paths (dataset, scene files, model save locations, and log file paths) in the script according to your local directory structure.  
+✅ Update the config_file_path variable to point to your configuration file.  
+✅ Verify that the dataset and scene XML files exist at the specified locations.  
+Example instruction to include:
+⚙️ "Make sure to modify all file paths in the script (like scene_path, save_path, config_file_path, model_save_path, model_result_path and dataset locations) to match your system's directory structure."
+  
+In addition to the primary training environment, we also tested the trained model in a new physical environment. After performing calibration (fine-tuning on the new environment's data), we achieved a mean Euclidean distance error of approximately 0.8317 meters on the test dataset.  
+To run and test the model run the script localization_model/model_test.py  
+Precautions while running the test script
+✅ Make sure all directories exist or create them before running the script.
+✅ Ensure the dataset files and scene XML files are correctly located in the specified directories.
+✅ Adjust all file paths in the script if your directory structure is different.
+✅ Check that the model2.yml configuration file contains the correct dataset, model, and result paths.
+
+
+
 
 
 

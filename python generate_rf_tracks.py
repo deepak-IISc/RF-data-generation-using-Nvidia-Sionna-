@@ -120,12 +120,12 @@ for i in range(9, 10):
             # [50, -50, 20],
             # [-50, -50, 20]
         ]
-        # tx_orientation = [
-        #     [0, 0, 0],       # forward (x)
-        #     [0, 90, 0],      # right (y)
-        #     [0, 180, 0],     # back (-x)
-        #     [0, 270, 0]    # downward tilt
-        # ]
+        tx_orientation = [
+            [0, 0, 0],       # forward (x)
+            [0, 90, 0],      # right (y)
+            [0, 180, 0],     # back (-x)
+            [0, 270, 0]    # downward tilt
+        ]
         with h5py.File(save_path, 'a') as f:
             csids = f['csidata']
             # txds=f['tx_positions']
@@ -135,8 +135,7 @@ for i in range(9, 10):
             # for tx, tx_pos in enumerate(tx_positions):
             
 
-            # for k, tx_or in enumerate(tx_orientations):
-            for k in [3, 7, 8]:
+            for k, tx_or in enumerate(tx_orientations):
                 tx_or = tx_orientations[k]
                 track, tx_ori, velocity_vecs = generate_rotated_ue_track(tx_pos=[0,0,0],tx_ori=tx_or, n_points=40)
                 my_tx1 = Transmitter(name="my_tx1",

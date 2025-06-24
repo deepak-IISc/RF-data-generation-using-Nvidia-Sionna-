@@ -1,7 +1,7 @@
-# RF-data-generation-using-Nvidia-Sionna
-This repository simulates RF signal tracks with Doppler effect using the NVIDIA Sionna ray tracing library. The generated data includes CSI matrices, receiver tracks, and transmitter orientations for multiple scene configurations.
-project/
-│
+# RF-data-generation-using-Nvidia-Sionna  
+This repository simulates RF signal tracks with Doppler effect using the NVIDIA Sionna ray tracing library. The generated data includes CSI matrices, receiver tracks, and transmitter orientations for multiple scene configurations.  
+project/  
+│  
 ├── generate_rf_tracks.py      # Main simulation script  
 ├── /home/xml_scene/           # Folder containing XML files for scenes  
 │   ├── scene1/  
